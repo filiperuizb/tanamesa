@@ -177,11 +177,6 @@ export default function RestaurantTableMap({ restaurantId }: RestaurantTableMapP
             BAR & BALCÃO
           </div>
 
-          {/* Área VIP */}
-          <div className="absolute top-6 right-6 w-32 h-20 bg-gradient-to-br from-purple-100 to-purple-200 border-2 border-purple-300 rounded-xl flex items-center justify-center">
-            <span className="text-purple-700 font-semibold text-xs">ÁREA VIP</span>
-          </div>
-
           {/* Mesas */}
           {mesas.map((mesa) => {
             const { width, height, rounded } = getTableSize(mesa.capacidade)
