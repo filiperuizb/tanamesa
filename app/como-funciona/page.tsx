@@ -240,58 +240,6 @@ export default function ComoFuncionaPage() {
         </div>
       </section>
 
-      {/* Área do Usuário */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          {/* Título centralizado */}
-          <div className="text-center mb-8 fade-in">
-            <h3 className="text-3xl font-bold mb-4 text-gray-900 code-bold">
-              Sua Conta <span className="text-gradient-orange">Personalizada</span>
-            </h3>
-          </div>
-          
-          {/* Conteúdo centralizado */}
-          <div className="max-w-2xl mx-auto fade-in"> {/* Usando mx-auto para centralizar */}
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Calendar className="h-6 w-6 text-orange-600" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-2 text-gray-900">Histórico Completo</h4>
-                  <p className="text-gray-600">
-                    Acesse todas suas reservas anteriores e acompanhe as próximas em um só lugar.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Users className="h-6 w-6 text-orange-600" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-2 text-gray-900">Perfil Simples</h4>
-                  <p className="text-gray-600">
-                    Mantenha suas informações básicas atualizadas: nome e e-mail para contato.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <QrCode className="h-6 w-6 text-orange-600" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-2 text-gray-900">Vouchers Digitais</h4>
-                  <p className="text-gray-600">
-                    Todos seus comprovantes de reserva ficam salvos e acessíveis na sua conta.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Final */}
       <section className="py-20 bg-gradient-to-br from-orange-500 to-amber-500">
