@@ -27,7 +27,8 @@ export default function ParaRestaurantesPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="py-24 md:py-32">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Remova o grid e centralize todo o conteúdo */}
+            <div className="max-w-3xl mx-auto text-center">
               <div className="fade-in">
                 <h1 className="text-5xl md:text-6xl font-black mb-6 text-gray-900 code-bold">
                   Transforme seu <span className="text-gradient-orange">Restaurante</span>
@@ -35,7 +36,7 @@ export default function ParaRestaurantesPage() {
                 <p className="text-xl md:text-2xl mb-8 text-gray-700 leading-relaxed">
                   Elimine filas, otimize reservas e aumente sua receita com nossa plataforma de gestão inteligente.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/restaurante/entrar">
                     <button className="button-primary px-8 py-4 rounded-xl text-white font-bold text-lg shadow-orange-lg code-bold">
                       Começar Agora
@@ -46,34 +47,6 @@ export default function ParaRestaurantesPage() {
                       Ver Demonstração
                     </button>
                   </Link>
-                </div>
-              </div>
-
-              <div className="slide-in-right">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-amber-500 rounded-3xl blur-2xl opacity-20"></div>
-                  <div className="relative bg-white rounded-3xl p-8 shadow-orange-lg border border-orange-100">
-                    <div className="text-center mb-6">
-                      <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <BarChart3 className="h-10 w-10 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900 code-bold">Painel de Controle</h3>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="flex justify-between items-center p-3 bg-green-50 rounded-xl">
-                        <span className="text-sm font-medium text-green-800">Reservas Hoje</span>
-                        <span className="text-xl font-bold text-green-600">24</span>
-                      </div>
-                      <div className="flex justify-between items-center p-3 bg-blue-50 rounded-xl">
-                        <span className="text-sm font-medium text-blue-800">Taxa de Ocupação</span>
-                        <span className="text-xl font-bold text-blue-600">85%</span>
-                      </div>
-                      <div className="flex justify-between items-center p-3 bg-orange-50 rounded-xl">
-                        <span className="text-sm font-medium text-orange-800">Receita do Mês</span>
-                        <span className="text-xl font-bold text-orange-600">R$ 45.2k</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -276,13 +249,16 @@ export default function ParaRestaurantesPage() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-amber-500 rounded-3xl blur-2xl opacity-20"></div>
                 <div className="relative bg-white rounded-3xl p-8 shadow-orange-lg border border-orange-100">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Dashboard do Restaurante"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto rounded-2xl"
-                  />
+                  {/* Apenas o wrapper da imagem com tamanho controlado */}
+                  <div className="w-30 mx-auto"> {/* Wrapper com largura fixa de 12rem (192px) */}
+                    <Image
+                      src="/logo.png"
+                      alt="Dashboard do Restaurante"
+                      width={120}
+                      height={60}
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -303,14 +279,14 @@ export default function ParaRestaurantesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/restaurante/entrar">
                 <button className="bg-white text-orange-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-50 transition-all duration-300 shadow-lg code-bold">
-                  Começar Gratuitamente
+                  Entrar
                 </button>
               </Link>
-              <Link href="/contato">
+              {/* <Link href="/contato">
                 <button className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-orange-600 transition-all duration-300 code-bold">
                   Falar com Especialista
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

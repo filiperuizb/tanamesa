@@ -61,12 +61,12 @@ export default function RestaurantsPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Restaurantes em Maringá</h1>
+      <h1 className="text-3xl font-bold mb-8 code-bold">Restaurantes em Maringá</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8">
         <div className="space-y-6">
           <div className="bg-card rounded-lg border p-4">
-            <h3 className="font-semibold mb-4">Filtrar Restaurantes</h3>
+            <h3 className="font-semibold mb-4 code-bold">Filtrar Restaurantes</h3>
 
             <div className="space-y-4">
               <div>
@@ -158,10 +158,11 @@ export default function RestaurantsPage() {
                 <Card className="overflow-hidden h-full hover:shadow-lg transition-all duration-300 hover:scale-105">
                   <div className="relative h-48 w-full">
                     <Image
-                      src={restaurant.image || "/placeholder.svg"}
+                      src={restaurant.srcImage || restaurant.image}
                       alt={restaurant.nome}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className="absolute top-4 right-4">
                       <Badge variant="secondary" className="bg-white/90 text-black">
@@ -171,7 +172,7 @@ export default function RestaurantsPage() {
                   </div>
                   <CardContent className="pt-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-xl font-semibold line-clamp-1">{restaurant.nome}</h3>
+                      <h3 className="text-xl font-semibold line-clamp-1 code-bold">{restaurant.nome}</h3>
                     </div>
                     <p className="text-primary font-medium mb-2">{restaurant.cuisine}</p>
                     <div className="flex items-center text-muted-foreground text-sm mb-2">

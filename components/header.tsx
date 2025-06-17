@@ -96,7 +96,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 code-bold">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -136,12 +136,6 @@ export default function Header() {
                     <div className="p-3">
                       {userType === "client" ? (
                         <>
-                          <Link
-                            href="/perfil"
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-orange-50 rounded-xl transition-colors"
-                          >
-                            Meu Perfil
-                          </Link>
                           <Link
                             href="/minhas-reservas"
                             className="block px-4 py-3 text-sm text-gray-700 hover:bg-orange-50 rounded-xl transition-colors"
@@ -209,16 +203,16 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-orange-100 py-4 fade-in">
-            <nav className="space-y-2">
+          <div className="md:hidden border-t border-orange-100 py-4 fade-in code-bold">
+            <nav className="space-y-2 code-bold">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={`block px-4 py-3 text-sm font-medium rounded-xl transition-colors ${
                     isActive(link.href)
-                      ? "text-orange-600 bg-orange-50"
-                      : "text-gray-600 hover:text-orange-600 hover:bg-orange-50"
+                      ? "text-orange-600 bg-orange-50 code-bold"
+                      : "text-gray-600 hover:text-orange-600 hover:bg-orange-50 code-bold"
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

@@ -10,7 +10,7 @@ export default function FeaturedRestaurants() {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([])
 
   useEffect(() => {
-    setRestaurants(getRestaurants().slice(0, 3))
+    setRestaurants(getRestaurants())
   }, [])
 
   return (
@@ -23,10 +23,12 @@ export default function FeaturedRestaurants() {
         >
           <div className="relative h-56 overflow-hidden">
             <Image
-              src={restaurant.image || "/placeholder.svg"}
+              src={restaurant.srcImage || restaurant.image}
               alt={restaurant.nome}
               fill
               className="object-cover transition-transform duration-500 hover:scale-110"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority={index < 3}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 

@@ -177,13 +177,16 @@ export default function ComoFuncionaPage() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-amber-500 rounded-3xl blur-2xl opacity-20"></div>
                 <div className="relative bg-white rounded-3xl p-8 shadow-orange-lg border border-orange-100">
-                  <Image
-                    src="/placeholder.svg?height=400&width=500"
-                    alt="Interface do TA NA MESA"
-                    width={500}
-                    height={400}
-                    className="w-full h-auto rounded-2xl"
-                  />
+                  {/* Apenas o wrapper da imagem com tamanho controlado */}
+                  <div className="w-48 mx-auto"> {/* Wrapper com largura fixa de 12rem (192px) */}
+                    <Image
+                      src="/logo.png"
+                      alt="Dashboard do Restaurante"
+                      width={120}
+                      height={60}
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -240,70 +243,49 @@ export default function ComoFuncionaPage() {
       {/* Área do Usuário */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="slide-in-left">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-amber-500 rounded-3xl blur-2xl opacity-20"></div>
-                <div className="relative bg-white rounded-3xl p-8 shadow-orange-lg border border-orange-100">
-                  <div className="text-center mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Users className="h-10 w-10 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 code-bold">Área do Usuário</h3>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="p-4 bg-orange-50 rounded-xl">
-                      <h4 className="font-bold text-orange-800 mb-2">Histórico de Reservas</h4>
-                      <p className="text-sm text-orange-600">Acompanhe todas suas reservas passadas e futuras</p>
-                    </div>
-                    <div className="p-4 bg-blue-50 rounded-xl">
-                      <h4 className="font-bold text-blue-800 mb-2">Informações Pessoais</h4>
-                      <p className="text-sm text-blue-600">Gerencie seus dados básicos: nome e e-mail</p>
-                    </div>
-                  </div>
+          {/* Título centralizado */}
+          <div className="text-center mb-8 fade-in">
+            <h3 className="text-3xl font-bold mb-4 text-gray-900 code-bold">
+              Sua Conta <span className="text-gradient-orange">Personalizada</span>
+            </h3>
+          </div>
+          
+          {/* Conteúdo centralizado */}
+          <div className="max-w-2xl mx-auto fade-in"> {/* Usando mx-auto para centralizar */}
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Calendar className="h-6 w-6 text-orange-600" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2 text-gray-900">Histórico Completo</h4>
+                  <p className="text-gray-600">
+                    Acesse todas suas reservas anteriores e acompanhe as próximas em um só lugar.
+                  </p>
                 </div>
               </div>
-            </div>
 
-            <div className="slide-in-right">
-              <h3 className="text-3xl font-bold mb-8 text-gray-900 code-bold">
-                Sua Conta <span className="text-gradient-orange">Personalizada</span>
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Calendar className="h-6 w-6 text-orange-600" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-2 text-gray-900">Histórico Completo</h4>
-                    <p className="text-gray-600">
-                      Acesse todas suas reservas anteriores e acompanhe as próximas em um só lugar.
-                    </p>
-                  </div>
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Users className="h-6 w-6 text-orange-600" />
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Users className="h-6 w-6 text-orange-600" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-2 text-gray-900">Perfil Simples</h4>
-                    <p className="text-gray-600">
-                      Mantenha suas informações básicas atualizadas: nome e e-mail para contato.
-                    </p>
-                  </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2 text-gray-900">Perfil Simples</h4>
+                  <p className="text-gray-600">
+                    Mantenha suas informações básicas atualizadas: nome e e-mail para contato.
+                  </p>
                 </div>
+              </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <QrCode className="h-6 w-6 text-orange-600" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-2 text-gray-900">Vouchers Digitais</h4>
-                    <p className="text-gray-600">
-                      Todos seus comprovantes de reserva ficam salvos e acessíveis na sua conta.
-                    </p>
-                  </div>
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <QrCode className="h-6 w-6 text-orange-600" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2 text-gray-900">Vouchers Digitais</h4>
+                  <p className="text-gray-600">
+                    Todos seus comprovantes de reserva ficam salvos e acessíveis na sua conta.
+                  </p>
                 </div>
               </div>
             </div>
