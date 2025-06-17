@@ -20,11 +20,6 @@ export default function RestaurantSidebar() {
       icon: <LayoutDashboard className="h-5 w-5 mr-3" />,
     },
     {
-      name: "Reservas",
-      href: "/restaurante/reservas",
-      icon: <CalendarDays className="h-5 w-5 mr-3" />,
-    },
-    {
       name: "Mesas",
       href: "/restaurante/mesas",
       icon: <Users className="h-5 w-5 mr-3" />,
